@@ -131,9 +131,9 @@ Phrase:   {}
 Guessed:  {}""".format(category, obscuredPhrase, ', '.join(sorted(guessed)))
 
 # GAME LOGIC CODE
-print('='*16)
-print('WHEEL OF FORTUNE')
-print('='*16)
+print('='*18)
+print(' WHEEL OF FORTUNE')
+print('='*18)
 print('')
 
 num_human = getNumberBetween('How many human players?', 0, 10)
