@@ -1,9 +1,8 @@
-# PASTE YOUR WOFPlayer CLASS (from part A) HERE
+
 class WOFPlayer():
     def __init__(self, name):
         self.name = name
         self.prizeMoney = 0
-        #self.pizeMoney = self.prizeMoney
         self.prizes = []
     def addMoney(self, amt):
         self.prizeMoney += amt
@@ -14,7 +13,6 @@ class WOFPlayer():
     def __str__(self):
         return '{} (${})'.format(self.name, self.prizeMoney)
 
-# PASTE YOUR WOFHumanPlayer CLASS (from part B) HERE
 class WOFHumanPlayer(WOFPlayer):
 
     def getMove(self, category, obscuredPhrase, guessed):
@@ -32,13 +30,8 @@ Guess a letter, phrase, or type 'exit' or 'pass':'''.format(name=self.name, priz
         return res
 
 
-# PASTE YOUR WOFComputerPlayer CLASS (from part C) HERE
 class WOFComputerPlayer(WOFPlayer):
     SORTED_FREQUENCIES = 'ZQXJKVBPYGFWMUCLDRHSNIOATE'
-
-    #    LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    #    VOWELS = 'AEIOU'
-    #    VOWEL_COST = 250
 
     def __init__(self, name, difficulty):
         super().__init__(name)
@@ -138,9 +131,9 @@ Phrase:   {}
 Guessed:  {}""".format(category, obscuredPhrase, ', '.join(sorted(guessed)))
 
 # GAME LOGIC CODE
-print('='*15)
-print('WHEEL OF PYTHON')
-print('='*15)
+print('='*16)
+print('WHEEL OF FORTUNE')
+print('='*16)
 print('')
 
 num_human = getNumberBetween('How many human players?', 0, 10)
